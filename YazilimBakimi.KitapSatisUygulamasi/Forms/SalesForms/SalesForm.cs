@@ -14,7 +14,6 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
         private List<Book> Books { get; set; }
         private BindingSource BindingSource { get; set; } = new BindingSource();
         public bool CreationSuccessful { get; private set; }
-
         ToolTip toolTip = new ToolTip();
 
 
@@ -32,7 +31,6 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             Books = DbBook.GetBooks();
             BindingSource.DataSource = Books;
             gridViewBook.DataSource = BindingSource;
-
         }
 
         private void buttonSiparisAl_Click(object sender, EventArgs e)
@@ -55,7 +53,6 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
         private void SalesForm_Load(object sender, EventArgs e)
         {
             this.tblBookTableAdapter.Fill(this.kitapSatisDataSet3.TblBook);
-
         }
 
         private void buttonSil_Click(object sender, EventArgs e)
@@ -82,32 +79,25 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             for (int i = 0; i < textboxTC.Items.Count; i++)
             {
                 cmd.Parameters["@TC"].Value = textboxTC.Items[i].ToString();
-
             }
 
             for (int i = 0; i < textboxName.Items.Count; i++)
             {
                 cmd.Parameters["@customerName"].Value = textboxName.Items[i].ToString();
-
             }
 
             for (int i = 0; i < textboxPhone.Items.Count; i++)
             {
                 cmd.Parameters["@customerPhone"].Value = textboxPhone.Items[i].ToString();
-
             }
 
             for (int i = 0; i < textboxAdress.Items.Count; i++)
             {
                 cmd.Parameters["@customerAdress"].Value = textboxAdress.Items[i].ToString();
-
             }
 
             order = textboxOrder.Items.Cast<string>().Aggregate("| ", (q, x) => x + " | " + q.ToString());
-
-
             cmd.Parameters["@Order"].Value = order.ToString();
-
             cmd.ExecuteNonQuery();
             connection.Close();
 
@@ -116,7 +106,6 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             CustomerForm cf = new CustomerForm();
             this.Hide();
             cf.ShowDialog();
-
         }
 
         private void buttonGeri_Click(object sender, EventArgs e)

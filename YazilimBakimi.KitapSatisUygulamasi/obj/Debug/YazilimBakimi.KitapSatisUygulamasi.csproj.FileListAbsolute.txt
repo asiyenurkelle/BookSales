@@ -125,3 +125,6 @@ C:\BookSalesApp-master\YazilimBakimi.KitapSatisUygulamasi\obj\Debug\YazilimBakim
 C:\BookSalesApp-master\YazilimBakimi.KitapSatisUygulamasi\obj\Debug\YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms.CustomerForm.resources
 C:\BookSalesApp-master\YazilimBakimi.KitapSatisUygulamasi\obj\Debug\YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms.SalesForm.resources
 C:\BookSalesApp-master\YazilimBakimi.KitapSatisUygulamasi\obj\Debug\YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms.SalesCRUD.resources
+C:\Users\YunusEmre\Desktop\BookSalesApp-master\YazilimBakimi.KitapSatisUygulamasi\obj\Debug\YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms.CustomerForm.resources
+C:\Users\YunusEmre\Desktop\BookSalesApp-master\YazilimBakimi.KitapSatisUygulamasi\obj\Debug\YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms.SalesCRUD.resources
+C:\Users\YunusEmre\Desktop\BookSalesApp-master\YazilimBakimi.KitapSatisUygulamasi\obj\Debug\YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms.SalesForm.resources

@@ -51,6 +51,18 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             this.kitapSatisDataSet4 = new YazilimBakimi.KitapSatisUygulamasi.KitapSatisDataSet4();
             this.kitapSatisDataSet5 = new YazilimBakimi.KitapSatisUygulamasi.KitapSatisDataSet5();
             this.btnSaleUpdate = new System.Windows.Forms.Button();
+            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtAdress = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTC = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtOrder = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblSalesBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kitapSatisDataSet6)).BeginInit();
@@ -77,7 +89,7 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             this.gridViewSale.DataSource = this.tblSalesBindingSource2;
             this.gridViewSale.Location = new System.Drawing.Point(2, 66);
             this.gridViewSale.Name = "gridViewSale";
-            this.gridViewSale.Size = new System.Drawing.Size(867, 273);
+            this.gridViewSale.Size = new System.Drawing.Size(655, 273);
             this.gridViewSale.TabIndex = 6;
             // 
             // tCDataGridViewTextBoxColumn
@@ -133,7 +145,7 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             this.panel1.Controls.Add(this.backToSignUpButton);
             this.panel1.Location = new System.Drawing.Point(2, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(796, 54);
+            this.panel1.Size = new System.Drawing.Size(655, 54);
             this.panel1.TabIndex = 5;
             // 
             // pbBaslik
@@ -162,9 +174,9 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             // 
             this.btnSaleDelete.BackgroundImage = global::YazilimBakimi.KitapSatisUygulamasi.Properties.Resources.delete;
             this.btnSaleDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSaleDelete.Location = new System.Drawing.Point(459, 365);
+            this.btnSaleDelete.Location = new System.Drawing.Point(337, 345);
             this.btnSaleDelete.Name = "btnSaleDelete";
-            this.btnSaleDelete.Size = new System.Drawing.Size(189, 79);
+            this.btnSaleDelete.Size = new System.Drawing.Size(320, 79);
             this.btnSaleDelete.TabIndex = 9;
             this.btnSaleDelete.UseVisualStyleBackColor = true;
             this.btnSaleDelete.Click += new System.EventHandler(this.btnSaleDelete_Click);
@@ -203,19 +215,135 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             // 
             this.btnSaleUpdate.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSaleUpdate.Image = global::YazilimBakimi.KitapSatisUygulamasi.Properties.Resources.update;
-            this.btnSaleUpdate.Location = new System.Drawing.Point(161, 365);
+            this.btnSaleUpdate.Location = new System.Drawing.Point(2, 345);
             this.btnSaleUpdate.Name = "btnSaleUpdate";
-            this.btnSaleUpdate.Size = new System.Drawing.Size(189, 79);
+            this.btnSaleUpdate.Size = new System.Drawing.Size(319, 79);
             this.btnSaleUpdate.TabIndex = 7;
             this.btnSaleUpdate.UseMnemonic = false;
             this.btnSaleUpdate.UseVisualStyleBackColor = true;
             this.btnSaleUpdate.Click += new System.EventHandler(this.btnSaleUpdate_Click);
             // 
+            // txtAd
+            // 
+            this.txtAd.Location = new System.Drawing.Point(64, 456);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(257, 20);
+            this.txtAd.TabIndex = 10;
+//            this.txtAd.TextChanged += new System.EventHandler(this.txtAd_TextChanged);
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(400, 456);
+            this.txtPhone.MaxLength = 11;
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(257, 20);
+            this.txtPhone.TabIndex = 11;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(400, 430);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(257, 20);
+            this.txtPrice.TabIndex = 12;
+            // 
+            // txtAdress
+            // 
+            this.txtAdress.Location = new System.Drawing.Point(64, 485);
+            this.txtAdress.MaxLength = 11;
+            this.txtAdress.Multiline = true;
+            this.txtAdress.Name = "txtAdress";
+            this.txtAdress.Size = new System.Drawing.Size(257, 70);
+            this.txtAdress.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 459);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Ad:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(344, 459);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Telefon:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(358, 433);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Fiyat:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 488);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Adres:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 433);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "TC:";
+//            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // txtTC
+            // 
+            this.txtTC.Location = new System.Drawing.Point(64, 430);
+            this.txtTC.MaxLength = 11;
+            this.txtTC.Name = "txtTC";
+            this.txtTC.Size = new System.Drawing.Size(257, 20);
+            this.txtTC.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(349, 485);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Sipariş:";
+            // 
+            // txtOrder
+            // 
+            this.txtOrder.Location = new System.Drawing.Point(400, 482);
+            this.txtOrder.MaxLength = 50;
+            this.txtOrder.Multiline = true;
+            this.txtOrder.Name = "txtOrder";
+            this.txtOrder.Size = new System.Drawing.Size(257, 70);
+            this.txtOrder.TabIndex = 20;
+            // 
             // SalesCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 450);
+            this.ClientSize = new System.Drawing.Size(662, 611);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtOrder);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtTC);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtAdress);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtAd);
             this.Controls.Add(this.btnSaleDelete);
             this.Controls.Add(this.btnSaleUpdate);
             this.Controls.Add(this.gridViewSale);
@@ -233,6 +361,7 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             ((System.ComponentModel.ISupportInitialize)(this.kitapSatisDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kitapSatisDataSet5)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -259,5 +388,17 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
         private KitapSatisDataSet4 kitapSatisDataSet4;
         private KitapSatisDataSet5 kitapSatisDataSet5;
         private System.Windows.Forms.Button btnSaleUpdate;
+        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtAdress;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTC;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtOrder;
     }
 }
