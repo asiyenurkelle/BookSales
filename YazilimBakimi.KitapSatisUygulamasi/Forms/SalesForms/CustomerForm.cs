@@ -80,5 +80,12 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
 
 
         }
+
+        private void pictureBoxLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm cikis = new LoginForm();
+            cikis.ShowDialog();
+        }
     }
 }

@@ -14,8 +14,8 @@ namespace YazilimBakimi.KitapSatisUygulamasi
 {
     public partial class SignUp : Form
     {
-       
-        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["YunusEmreConnection"].ConnectionString);
+
+        SqlConnection connection = new SqlConnection("Server = . ; Database = KitapSatis; integrated security=true");
         public SignUp()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace YazilimBakimi.KitapSatisUygulamasi
         private void btnLoginSignUp_Click(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("INSERT INTO TblLoginCustomer (UserName,Password) values ('" + textBoxNameSignUp.Text + "','" + Cryptology.MD5Sifrele(textBoxPasswordSignUp.Text)  + "')", connection);
+            SqlCommand command = new SqlCommand("INSERT INTO TblLoginCustomer (UserName,Password,Answer) values ('" + textBoxNameSignUp.Text + "','" + Cryptology.MD5Sifrele(textBoxPasswordSignUp.Text) + "','" + txtBxAnswer.Text + "')", connection);
             command.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show("Başarılı", "Program");
@@ -40,6 +40,11 @@ namespace YazilimBakimi.KitapSatisUygulamasi
         }
 
         private void SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

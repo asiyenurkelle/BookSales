@@ -29,7 +29,11 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.groupBoxKisiselBilgiler = new System.Windows.Forms.GroupBox();
+            this.buttonTemizle = new System.Windows.Forms.Button();
+            this.buttonKaydet = new System.Windows.Forms.Button();
+            this.buttonListele = new System.Windows.Forms.Button();
             this.textboxAdress = new System.Windows.Forms.TextBox();
             this.textboxPhone = new System.Windows.Forms.TextBox();
             this.textboxName = new System.Windows.Forms.TextBox();
@@ -38,10 +42,9 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonTemizle = new System.Windows.Forms.Button();
-            this.buttonKaydet = new System.Windows.Forms.Button();
-            this.buttonListele = new System.Windows.Forms.Button();
+            this.pictureBoxLogout = new System.Windows.Forms.PictureBox();
             this.groupBoxKisiselBilgiler.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxKisiselBilgiler
@@ -64,6 +67,40 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             this.groupBoxKisiselBilgiler.TabStop = false;
             this.groupBoxKisiselBilgiler.Text = "Kişisel Bilgiler";
             this.groupBoxKisiselBilgiler.Enter += new System.EventHandler(this.groupBoxKisiselBilgiler_Enter);
+            // 
+            // buttonTemizle
+            // 
+            this.buttonTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTemizle.Image = global::YazilimBakimi.KitapSatisUygulamasi.Properties.Resources.delete;
+            this.buttonTemizle.Location = new System.Drawing.Point(105, 269);
+            this.buttonTemizle.Name = "buttonTemizle";
+            this.buttonTemizle.Size = new System.Drawing.Size(75, 73);
+            this.buttonTemizle.TabIndex = 14;
+            this.buttonTemizle.UseVisualStyleBackColor = true;
+            this.buttonTemizle.Click += new System.EventHandler(this.buttonTemizle_Click);
+            // 
+            // buttonKaydet
+            // 
+            this.buttonKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonKaydet.Image = global::YazilimBakimi.KitapSatisUygulamasi.Properties.Resources.add;
+            this.buttonKaydet.Location = new System.Drawing.Point(20, 269);
+            this.buttonKaydet.Name = "buttonKaydet";
+            this.buttonKaydet.Size = new System.Drawing.Size(75, 73);
+            this.buttonKaydet.TabIndex = 13;
+            this.buttonKaydet.UseVisualStyleBackColor = true;
+            this.buttonKaydet.Click += new System.EventHandler(this.buttonKaydet_Click);
+            // 
+            // buttonListele
+            // 
+            this.buttonListele.BackgroundImage = global::YazilimBakimi.KitapSatisUygulamasi.Properties.Resources.back_arrow___Kopya;
+            this.buttonListele.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListele.Location = new System.Drawing.Point(196, 269);
+            this.buttonListele.Name = "buttonListele";
+            this.buttonListele.Size = new System.Drawing.Size(75, 73);
+            this.buttonListele.TabIndex = 15;
+            this.buttonListele.UseVisualStyleBackColor = true;
+            this.buttonListele.Click += new System.EventHandler(this.buttonListele_Click);
             // 
             // textboxAdress
             // 
@@ -132,51 +169,32 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
             this.label1.TabIndex = 0;
             this.label1.Text = "TC No";
             // 
-            // buttonTemizle
+            // pictureBoxLogout
             // 
-            this.buttonTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTemizle.Image = global::YazilimBakimi.KitapSatisUygulamasi.Properties.Resources.delete;
-            this.buttonTemizle.Location = new System.Drawing.Point(105, 269);
-            this.buttonTemizle.Name = "buttonTemizle";
-            this.buttonTemizle.Size = new System.Drawing.Size(75, 73);
-            this.buttonTemizle.TabIndex = 14;
-            this.buttonTemizle.UseVisualStyleBackColor = true;
-            this.buttonTemizle.Click += new System.EventHandler(this.buttonTemizle_Click);
-            // 
-            // buttonKaydet
-            // 
-            this.buttonKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonKaydet.Image = global::YazilimBakimi.KitapSatisUygulamasi.Properties.Resources.add;
-            this.buttonKaydet.Location = new System.Drawing.Point(20, 269);
-            this.buttonKaydet.Name = "buttonKaydet";
-            this.buttonKaydet.Size = new System.Drawing.Size(75, 73);
-            this.buttonKaydet.TabIndex = 13;
-            this.buttonKaydet.UseVisualStyleBackColor = true;
-            this.buttonKaydet.Click += new System.EventHandler(this.buttonKaydet_Click);
-            // 
-            // buttonListele
-            // 
-            this.buttonListele.BackgroundImage = global::YazilimBakimi.KitapSatisUygulamasi.Properties.Resources.back_arrow___Kopya;
-            this.buttonListele.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buttonListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonListele.Location = new System.Drawing.Point(196, 269);
-            this.buttonListele.Name = "buttonListele";
-            this.buttonListele.Size = new System.Drawing.Size(75, 73);
-            this.buttonListele.TabIndex = 15;
-            this.buttonListele.UseVisualStyleBackColor = true;
-            this.buttonListele.Click += new System.EventHandler(this.buttonListele_Click);
+            this.pictureBoxLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogout.BackgroundImage")));
+            this.pictureBoxLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxLogout.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogout.Image")));
+            this.pictureBoxLogout.Location = new System.Drawing.Point(308, 281);
+            this.pictureBoxLogout.Name = "pictureBoxLogout";
+            this.pictureBoxLogout.Size = new System.Drawing.Size(68, 73);
+            this.pictureBoxLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogout.TabIndex = 21;
+            this.pictureBoxLogout.TabStop = false;
+            this.pictureBoxLogout.Click += new System.EventHandler(this.pictureBoxLogout_Click);
             // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 372);
+            this.ClientSize = new System.Drawing.Size(445, 381);
+            this.Controls.Add(this.pictureBoxLogout);
             this.Controls.Add(this.groupBoxKisiselBilgiler);
             this.Name = "CustomerForm";
             this.Text = "CustomerForm";
             this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.groupBoxKisiselBilgiler.ResumeLayout(false);
             this.groupBoxKisiselBilgiler.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,5 +213,6 @@ namespace YazilimBakimi.KitapSatisUygulamasi.Forms.SalesForms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBoxLogout;
     }
 }

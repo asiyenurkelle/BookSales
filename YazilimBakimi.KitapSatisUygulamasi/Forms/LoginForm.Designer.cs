@@ -37,6 +37,7 @@
             this.lblSingUp = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.pbLogin = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,6 +143,17 @@
             this.pbLogin.TabIndex = 8;
             this.pbLogin.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(62, 320);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(81, 13);
+            this.linkLabel1.TabIndex = 11;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Şifremi Unuttum";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AcceptButton = this.btnLogin;
@@ -150,6 +162,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(387, 475);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pbLogin);
             this.Controls.Add(this.lblAdmin);
             this.Controls.Add(this.lblSingUp);
@@ -180,6 +193,7 @@
         private System.Windows.Forms.Label lblSingUp;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.PictureBox pbLogin;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

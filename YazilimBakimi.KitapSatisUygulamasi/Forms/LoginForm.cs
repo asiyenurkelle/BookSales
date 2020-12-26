@@ -17,7 +17,7 @@ namespace YazilimBakimi.KitapSatisUygulamasi
 
     public partial class LoginForm : Form
     {
-        public static SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["YunusEmreConnection"].ConnectionString);
+        public static SqlConnection connection = new SqlConnection("Server = . ; Database = KitapSatis; integrated security = true");
         public LoginForm()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace YazilimBakimi.KitapSatisUygulamasi
         {
             string userName = textBoxName.Text;
             string password = Cryptology.MD5Sifrele(textBoxPassword.Text);
-            
+
 
             connection.Open();
             SqlCommand command = new SqlCommand("SELECT * FROM TblLoginCustomer", connection);
@@ -50,7 +50,7 @@ namespace YazilimBakimi.KitapSatisUygulamasi
             connection.Close();
             if (isThere)
             {
-              
+
                 this.Hide();
                 CustomerForm CF = new CustomerForm();
                 CF.ShowDialog();
@@ -60,6 +60,7 @@ namespace YazilimBakimi.KitapSatisUygulamasi
             {
                 MessageBox.Show("Hatalı kullanıcı adı veya şifre!");
             }
+
 
 
 
@@ -80,5 +81,11 @@ namespace YazilimBakimi.KitapSatisUygulamasi
 
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            ForgetPassword frm = new ForgetPassword();
+            frm.Show();
+        }
     }
 }
